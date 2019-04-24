@@ -11,6 +11,39 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// el archivo web es el archivo general donde debemos de trabajar con las routes pues los otros archivos ubicados en esta carpeta son para ocasiones mas especificas
+
+
+
+// de esta forma trabajamos las rutas con los controladores si un controlador tiene una funcion accedemos a ella mediante @
+Route::get('/', 'PagesController@index' );
+
+Route::get('/about', 'PagesController@about');
+
+Route::get('/services', 'PagesController@services');
+
+
+
+
+
+
+
+/* esta demas especificar el .blade.php solo la carpeta en que se encuentra la pagina seguido de un punto mas el nombre de la pagina
+Route::get('/about', function () {
+    return view('pages.about');
+});*/
+
+
+
+/*ejemplo de ruta dinamica esta es una ruta a la que se le podria mandar un id y nombre y esta lo mostrara en el navegador
+
+Route::get('/users/{id}/{name}', function ($id, $name) {
+    return 'This is user '.$name.' with and id of '.$id;
+});*/
+
+
+/* ejemplo de ruta  mostrando texto normal con html tags<>
+
+Route::get('/hello', function () {
+    return '<h1>Hello world</h1>';
+});*/
