@@ -23,6 +23,9 @@ Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 
 
+// si tenemos un controlador con muchas funciones que fue creado con el --resource al final es recomendable escribir su ruta de esta forma y asi esta ruta agregara todas las funciones del controlador sin tener que agregar las rutas una por una
+Route::resource('posts', 'PostsController');
+
 
 
 
