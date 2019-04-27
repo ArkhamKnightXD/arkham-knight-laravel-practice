@@ -33,7 +33,7 @@ class PostsController extends Controller
      //De esta forma se hace la paginacion 
 
 
-     $posts = Post::orderBy('title', 'desc')->paginate(1);
+     $posts = Post::orderBy('title', 'desc')->paginate(10);
 
         //el orderby lo que hace es ordernar las entradas por titulo y en orden ascendente alfabeticamente para descendiente seria desc
       //$posts = Post::orderBy('title', 'desc')->get();
@@ -49,7 +49,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
