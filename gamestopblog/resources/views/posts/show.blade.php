@@ -12,7 +12,7 @@
                         <a href="/posts" class="btn btn-primary">Go back</a>
                         <h1>{{$post->title}}</h1>
                         <div>
-                                <li>{{$post->body}}</li>
+                                <li>{!!$post->body!!}</li>
                         </div>
                         <hr>
                         

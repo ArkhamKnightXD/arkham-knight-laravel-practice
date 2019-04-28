@@ -33,7 +33,7 @@ class PostsController extends Controller
      //De esta forma se hace la paginacion 
 
 
-     $posts = Post::orderBy('title', 'desc')->paginate(10);
+     $posts = Post::orderBy('created_at', 'desc')->paginate(10);
 
         //el orderby lo que hace es ordernar las entradas por titulo y en orden ascendente alfabeticamente para descendiente seria desc
       //$posts = Post::orderBy('title', 'desc')->get();
@@ -60,7 +60,28 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Aqui vienen los datos enviados desde el formulario del create 
+
+
+        //de esta forma se validan los datos en laravel
+        $this->validate ($request,[
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        // y ahora utilizamos los datos mandados para crear un nuevo post
+        $post = new Post;
+
+
+        // de esta forma obtenemos los datos ingresados mediante el request y se lo asignamos a los valores que iran directo al nuevo post y con save() agregamos ese nuevo post a la base de datos
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+
+        $post->save();
+
+        // Al final hacemos un redireccionamiento con un mensaje de que se creo el nuevo post
+
+        return redirect('/posts')->with('success','Post created');
     }
 
     /**

@@ -14,11 +14,14 @@
         <!--De esta forna incluyo una pagina extra que en este caso es navbar -->
         @include('include.navbar')
 
-        <div class="container">
-
+        <div class="concletainer">
+                @include('include.message')
                 @yield('content')
 
         </div>
-        
+        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'summary-ckeditor' );
+</script>
     </body>
 </html>
