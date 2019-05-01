@@ -76,6 +76,10 @@ class PostsController extends Controller
         // de esta forma obtenemos los datos ingresados mediante el request y se lo asignamos a los valores que iran directo al nuevo post y con save() agregamos ese nuevo post a la base de datos
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        
+        // a diferencia de los demas campos este no usara request ya que este dato no se obtiene del formulario de la vista sino de la autenticacion
+
+        $post->user_id = auth()->user()->id;
 
         $post->save();
 
@@ -106,7 +110,10 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Aqui se trabajara con lo que es el edit de la aplicacion y igual que el show a esta funcion se le manda un id, por lo tanto siempre se debe de emperzar con un find();
+        $post = Post::find($id);
+
+        return view('posts/edit')->with('post', $post);
     }
 
     /**
@@ -118,7 +125,23 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $this->validate ($request,[
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        // Los datos se obtienen de la misma forma que en store la unica diferencia es que en vez de crear un nuevo post, debemos de buscarlo con el id mandado a la funcion desde el edit, para asi trabajar con los datos obtenidos
+
+        $post = Post::find($id);
+
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+
+        $post->save();
+
+
+        return redirect('/posts')->with('success','Post updated');
     }
 
     /**
@@ -129,6 +152,11 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Esta es la funcion que se encarga del borrado y es la mas sencilla es simplemente buscar el post mediante el id y luego hacer delete
+        $post = Post::find($id);
+
+        $post->delete();
+
+        return redirect('/posts')->with('Delete', 'Post deleted');
     }
 }

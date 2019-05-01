@@ -3,14 +3,6 @@
 @section('content')
 
 
-<br>
-
-<br> 
-
-<br>
-
-<br>
-
 <h1>post</h1>
 
 @if (count($posts) > 0)

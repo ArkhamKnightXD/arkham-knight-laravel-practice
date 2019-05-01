@@ -1,27 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--De esta forma agrego un archivo css que se encuentra en la carpeta public -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-        <title>Gamestopblog</title>
+    <!-- CSRF Token Esto sirve para mejorar la seguridad -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    </head>
-    <body>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!--De esta forna incluyo una pagina extra que en este caso es navbar -->
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        
         @include('include.navbar')
+        @include('include.message')
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
+    <!-- Codigo para poner el ckeditor -->
 
-        <div class="concletainer">
-                @include('include.message')
-                @yield('content')
-
-        </div>
-        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-<script>
-    CKEDITOR.replace( 'summary-ckeditor' );
-</script>
-    </body>
+</body>
 </html>
