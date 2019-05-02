@@ -1,0 +1,18 @@
+para implementar migrations a la hora de trabajar con un modelo tenemos que escribir un -m al final de la creacion del modelo: php artisan make:model Post -m 
+
+
+Si ya una tabla o modelo ya esta hecho y queremos agregar un campo nuevo podemos hacer una migration y desde esta agregar los campos que queramos que nuestra tabla tenga usando este comando:
+
+
+php artisan make:migration add_user_id_to_posts
+
+
+
+Luego de que ya hayamos trabajado las funciones up en down del migrate que creamos ejecutamos este comando
+
+php artisan migrate
+
+
+si queremos hacer rollback para que se ejecute la funcion down del migration debemos ejecutar el siguiente comando:
+
+php artisan migrate rollback

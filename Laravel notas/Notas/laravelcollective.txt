@@ -1,0 +1,18 @@
+para trabajar con los formularios es necesario instalar la libreria laravel/collective
+
+para hacer esto primero hay que agregar en el archivo composer.json lo siguiente "laravelcollective/html":"5.4.0"
+
+justo debajo de laravel/tinker, luego de esto ejecutamos composer update laravelcollective/html
+
+
+
+y luego en config/app.php en la parte de aliases agregamos estas dos lineas
+
+‘Form’ => Collective\Html\FormFacade::class,
+‘Html’ => Collective\Html\HtmlFacade::class,
+
+
+si las cosas siguen fallando despues de esto se debe de ejecutar este comando
+
+
+composer require laravelcollective/html

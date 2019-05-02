@@ -1,0 +1,9 @@
+Para habilitar la autenticacion de usuario utilizamos el comando 
+
+php artisan make:auth
+
+
+Este comando tambien nos brinda con una pagina de base ya por defecto sobre la que podremos extender a las otras esta cuenta con su navbar, tambien este comando nos dara los que son logins y registro para nuestra aplicacion ya hechos y funcionales
+
+
+Este comando nos brinda con todas esas funcionalidades asi que seria sabio usar este comando casi al principio de la creacion de nuestra aplicacion para evitarnos trabajo de sobra en la edicion de la pagina base

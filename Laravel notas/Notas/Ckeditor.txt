@@ -1,0 +1,5 @@
+Ckeditor es un conjunto de herramientas para trabajar con los text area seria algo asi como la barra de herramientas de word
+
+si deseamos instalarlo solo debemos seguir las indicaciones de la pagina
+
+https://artisansweb.net/install-use-ckeditor-laravel/

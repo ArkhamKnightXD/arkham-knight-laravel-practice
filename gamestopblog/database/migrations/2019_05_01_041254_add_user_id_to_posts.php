@@ -13,7 +13,8 @@ class AddUserIdToPosts extends Migration
      */
     public function up()
     {
-        // En la funcion up se pone los campos que queremos agregar a la tabla y se agregaran cuando ejecutemos de nuevo el comando migration
+ // En la funcion up se pone los campos que queremos agregar a la tabla y se agregaran cuando ejecutemos de nuevo el 
+ //comando migration
         Schema::table('posts', function (Blueprint $table) {
             
             $table->integer('user_id');
@@ -27,7 +28,8 @@ class AddUserIdToPosts extends Migration
      */
     public function down()
     {
-        // aqui especificamos la accion que se tomara para devolver todo para atras que basicamente seria borrar la nueva columna que establecimos ahi arriba
+        // aqui especificamos la accion que se tomara para devolver todo para atras que basicamente seria borrar
+        // la nueva columna que establecimos ahi arriba
         Schema::table('posts', function (Blueprint $table) {
             $table->dropColumn('user_id');
         });

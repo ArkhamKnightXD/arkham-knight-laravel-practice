@@ -1,0 +1,1 @@
+Para trabajar con los archivos sass de css de laravel hay que instalar node.js que trae consigo npm luego hacemos npm install en la carpeta del proyecto y cuando ya hayamos cambios en el archivo para compilarlo debemos de usar npm run development la otra version es npm watch para no tener que hacer run siempre

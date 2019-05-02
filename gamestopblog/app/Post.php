@@ -18,7 +18,7 @@ class Post extends Model
 
      public function user()
      {
-         # Con esta funcion especifamos una relacion entre post y user esto quiere decir que un post pertenece a un usuario
+    // Con esta funcion especifamos una relacion entre post y user esto quiere decir que un post pertenece a un usuario
          return $this->belongsTo('App\User');
      }
 

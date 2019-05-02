@@ -11,7 +11,8 @@
 
     <div class="jumbotron">
 
-        <!--Aqui me encargo de mostrar las imagenes al lado de su post para eso creo un class row y dentro dos class col a la cual le doy a cada una un tamaño diferente -->
+        <!--Aqui me encargo de mostrar las imagenes al lado de su post para eso creo un class row y dentro dos 
+            class col a la cual le doy a cada una un tamaño diferente -->
         <div class="row">
 
             
@@ -21,9 +22,11 @@
             </div>
 
             <div class="col-md-8 col-sm-8">
-                   <!-- con este href mandamos el id a la ruta y de esta forma tambien lo mandamos al show para poder trabajar con este articulo-->
+                   <!-- con este href mandamos el id a la ruta y de esta forma tambien lo mandamos al show para poder 
+                    trabajar con este articulo-->
     <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-    <!--Con $post->user->name obtengo el nombre del usuario gracias a la relacion que especifique anteriormente asi que basicamente este es un ejemplo de como mostrar datos en la vista mediante relaciones -->
+    <!--Con $post->user->name obtengo el nombre del usuario gracias a la relacion que especifique anteriormente asi 
+        que basicamente este es un ejemplo de como mostrar datos en la vista mediante relaciones -->
     <small>Written on {{$post->created_at}} By {{$post->user->name}}</small>
                 </div>
 
@@ -33,7 +36,8 @@
         
     @endforeach
 
-    <!--De esta forma llamamos a la paginacion especificada en el controlador y aqui se agregaran los botones que nos permitiran ir de la pagina siguiente a la anterior para ver los resultados -->
+    <!--De esta forma llamamos a la paginacion especificada en el controlador y aqui se agregaran los botones que 
+        nos permitiran ir de la pagina siguiente a la anterior para ver los resultados -->
 
     {{$posts->links()}}
 

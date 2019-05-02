@@ -37,9 +37,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // cuando vayamos a trabajar con relaciones debemos venir al modelo y a esta funcion esto debemos hacerlo en los 
+    //2 modelos que tengan la relacion
     public function posts(Type $var = null)
     {
-        # Aqui especificamos la otra parte de la relacion pues es una relacion de 1 a mucho en la que un usuario puede tener uno o muchos posts por eso se usa el hasmany y se especifica la ruta del modelo tambien
+        // Aqui especificamos la otra parte de la relacion pues es una relacion de 1 a mucho en la que un usuario puede 
+        //tener uno o muchos posts por eso se usa el hasmany y se especifica la ruta del modelo tambien
         return $this->hasMany('App\Post');
     }
 }

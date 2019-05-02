@@ -1,0 +1,1 @@
+sino queremos trabajar css mediante sass simplemente trabajamos con el app.css del folder public y ahi modificamos cualquier cosa, este archivo es proporcionado por bootstap que viene incluido 

@@ -1,0 +1,4 @@
+Para linkear los directorios de storage para que asi podamos almacenar imagenes en este usamos el comando este comando tambien hara que lo que se almacene en storage/app/public nos salga en la carpeta  public/storage
+
+
+php artisan storage:link

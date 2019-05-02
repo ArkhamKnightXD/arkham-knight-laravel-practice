@@ -25,6 +25,7 @@
         @include('include.navbar')
         @include('include.message')
         <main class="py-4">
+            <!--Aqui dentro ira ubicado el contenido de las paginas que heredan esta plantilla -->
             @yield('content')
         </main>
     </div>

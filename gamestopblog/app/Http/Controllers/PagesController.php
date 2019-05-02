@@ -13,8 +13,10 @@ class PagesController extends Controller
 
         $title = 'Welcome to laravel!';
 
-        // dos formas de mandar parametros a una pagina el segundo metodo es el mas eficiente pues se puede mandar varias variables en el primero solo se puede mandar 1
+        // Hay dos formas de mandar parametros a una pagina el segundo metodo es el mas eficiente pues se puede mandar 
+        //varias variables en el primero solo se puede mandar 1
        // return view('pages.index', compact('title'));
+
         return view('pages.index')->with('title',$title);
     }
 
@@ -31,7 +33,7 @@ class PagesController extends Controller
         'services' =>['Web desing','Programming','Seo']
     
     );
-
+        // Como todo esta dentro de la variable $data podremos acceder ya sea al title como al arreglo services en la vista 
         return view('pages.services')->with($data);
     }
 }
