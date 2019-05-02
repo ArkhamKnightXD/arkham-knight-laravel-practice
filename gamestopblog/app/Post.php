@@ -12,7 +12,14 @@ class Post extends Model
 
     //primary key
 
-    public $primaryKey = 'id';
+     public $primaryKey = 'id';
 
      public $timestamps = true;
+
+     public function user()
+     {
+         # Con esta funcion especifamos una relacion entre post y user esto quiere decir que un post pertenece a un usuario
+         return $this->belongsTo('App\User');
+     }
+
 }

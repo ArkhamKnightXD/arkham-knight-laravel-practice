@@ -50,6 +50,8 @@ Route::get('/users/{id}/{name}', function ($id, $name) {
 Route::get('/hello', function () {
     return '<h1>Hello world</h1>';
 });*/
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

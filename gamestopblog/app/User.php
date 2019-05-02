@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts(Type $var = null)
+    {
+        # Aqui especificamos la otra parte de la relacion pues es una relacion de 1 a mucho en la que un usuario puede tener uno o muchos posts por eso se usa el hasmany y se especifica la ruta del modelo tambien
+        return $this->hasMany('App\Post');
+    }
 }
