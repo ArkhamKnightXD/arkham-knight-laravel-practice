@@ -5,7 +5,9 @@
 
     <h1>Create a post</h1>
 
-    <!--Esta es la forma en que se inicia un formulario en con laravel collective, aqui le especificamos a que funcion mandaremos los datos obtenidos aqui que en este caso es para la funcion store y esto sera almacenado en el array action, tambien especificamos que mandaremos la info mediante el metodo post -->
+    <!--Esta es la forma en que se inicia un formulario en con laravel collective, aqui le especificamos a que funcion
+         mandaremos los datos obtenidos aqui que en este caso es para la funcion store y esto sera almacenado en el 
+         array action, tambien especificamos que mandaremos la info mediante el metodo post -->
     {!! Form::open(['action'=>'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
         <!-- Asi se especifican los elementos del formulario basado en laravelcollective -->
@@ -25,6 +27,7 @@
 
         </div>
 
+        <!-- Agrego el boton que mandara los datos al store -->
         {{Form::submit('Submit',['class' => 'btn btn-primary'])}}
 
 

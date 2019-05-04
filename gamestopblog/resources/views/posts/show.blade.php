@@ -24,7 +24,8 @@
                 <!-- Este if sirve para evitar que se muestren los botones de editar y borrar sino esta logeado -->
                 @if (!Auth::guest())
 
-                <!-- Este if solo sirve para que solo el usuario que creo sus posts solo el mismo pueda editarlos y borrarlos y no otro usuario -->
+<!-- Este if solo sirve para que solo el usuario que creo sus posts solo el mismo pueda editarlos y borrarlos y no 
+        otro usuario -->
                 @if (Auth::user()->id == $post->user_id)
                 <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
                 
@@ -33,11 +34,11 @@
 
                 {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])  !!}
 
-                <!-- Al igual que con el edit que necesitaba un metodo put y para eso usamos el hiddent es lo mismo para el delete -->
+  <!-- Al igual que con el edit que necesitaba un metodo put y para eso usamos el hidden es lo mismo para el delete -->
                 {{Form::hidden('_method', 'DELETE')}}
 
 
-                 <!-- Este es el boton que manda la informacion e inicia el proceso   -->    
+                 <!-- Este es el boton que manda la informacion e inicia el proceso para borrar  -->    
                 {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
                 {!! Form::close() !!}
         
