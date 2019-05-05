@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body background="/storage/cover_images/fondo1.jpg">
     <div id="app">
         
         @include('include.navbar')

@@ -6,11 +6,11 @@
 <!-- jumbotron es una excelente clase para centrar texto y poner un fondo mas grisaceo esto es recomendado para escribir el mensaje de welcome de una pagina de inicio -->
 <div class="jumbotron text-center">
 
-        <h1>Welcome to gamestop</h1>
-        <p>This is an application made in laravel from scratch</p>
-        <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a><a class="btn btn-success btn-lg" href="/register" role="button">Register</a></p>
-        
+        <h1>Welcome to Games-top</h1>
+</div>
 
+<div>
+        <img style="width:100%" src="/storage/cover_images/consolas_318134.png" alt="index">
 </div>
 
 @endsection

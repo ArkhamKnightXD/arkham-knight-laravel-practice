@@ -3,7 +3,7 @@
 @section('content')
 
 
-<h1>post</h1>
+<h1 class="text-light">post</h1>
 
 @if (count($posts) > 0)
     

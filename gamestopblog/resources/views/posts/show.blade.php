@@ -7,18 +7,18 @@
         
             
                         <a href="/posts" class="btn btn-primary">Go back</a>
-                        <h1>{{$post->title}}</h1>
+                        <h1 class="text-light">{{$post->title}}</h1>
                             <!--Aqui me encargo de obtener la imagen de la ruta especificada -->
             <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
             <br>
             <br>
                         <div>
-                                <li>{!!$post->body!!}</li>
+                                <li class="text-light">{!!$post->body!!}</li>
                         </div>
                         <hr>
                         
                         <!-- Esto nos da la fecha en que la entrada fue creada -->
-                <small>Written on {{$post->created_at}} By {{$post->user->name}}</small>
+                <small class="text-light">Written on {{$post->created_at}} By {{$post->user->name}}</small>
                 
                 <hr>
                 <!-- Este if sirve para evitar que se muestren los botones de editar y borrar sino esta logeado -->
