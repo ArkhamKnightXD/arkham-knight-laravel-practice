@@ -1,4 +1,9 @@
-para implementar migrations a la hora de trabajar con un modelo tenemos que escribir un -m al final de la creacion del modelo: php artisan make:model Post -m 
+para implementar migrations a la hora de trabajar con un modelo tenemos que escribir un -m al final de la creacion del modelo, ademas de que se recomienda llamar al modelo en singular: php artisan make:model Post -m 
+
+Esto nos generara una migration y un modelo ahora nos vamos a trabajar en ambos en la migration agregaremos los campos que queremos que tenga nuestra tabla y en el modelo especificamos el primary key luego de que hayamos terminado con esto ejecutamos el comando:
+
+php artisan migrate
+
 
 
 Si ya una tabla o modelo ya esta hecho y queremos agregar un campo nuevo podemos hacer una migration y desde esta agregar los campos que queramos que nuestra tabla tenga usando este comando:

@@ -1,0 +1,29 @@
+si queremos que un controlador venga de una vez con las funciones basicas entiendase (index, show, destroy, ect..) lo que debemos hacer usar este comando
+
+php artisan make:controller CualquiernombreController --resource
+
+
+
+
+
+para implementar migrations a la hora de trabajar con un modelo usamos el siguiente comando:
+
+ php artisan make:model Nombredelmodelo -m
+
+
+
+
+
+Cuando ya hayamos terminado de trabajar con las migrations y modelos usamos este comando: 
+
+php artisan migrate
+
+
+
+
+si queremos hacer rollback para que se ejecute la funcion down del migration debemos ejecutar el siguiente comando:
+
+
+php artisan migrate rollback 
+
+

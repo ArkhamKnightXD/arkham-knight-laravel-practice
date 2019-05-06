@@ -14,7 +14,7 @@ class CreatePostsTable extends Migration
     public function up()
     {
 
-        // aqui agregamos los campos que queremos que tenga nuestro modelo en la tabla de la base de datos en phpmyadmin
+    // aqui agregamos los campos que queremos que tenga nuestro modelo en la tabla de la base de datos en phpmyadmin
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');

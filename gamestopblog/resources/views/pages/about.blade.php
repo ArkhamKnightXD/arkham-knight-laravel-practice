@@ -6,7 +6,7 @@
 
 <div class="jumbotron text-center">
     <h1>{{$title}}</h1>
-    <p>This site is for gaming consoles and videogames discussion </p>
+    <p>This site is for selling consoles and videogames </p>
 
 
 </div>

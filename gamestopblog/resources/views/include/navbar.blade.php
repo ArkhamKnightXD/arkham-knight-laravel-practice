@@ -28,10 +28,10 @@
                     <a class="nav-link" href="/posts" >Blog</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                       <a class="dropdown-item" href="/home">Dashboard</a>
-                      <a class="dropdown-item" href="#">Consoles</a>
+                      <a class="dropdown-item" href="/consoles">Consoles</a>
                       <a class="dropdown-item" href="#">Videogames</a>
 
                     </div>
