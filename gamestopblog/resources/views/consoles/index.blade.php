@@ -3,6 +3,12 @@
 
 @section('content')
 
-    <h1 class="text-light text-center">This is the consoles index page</h1>
+<h1 class="text-light text-center">{{$title}}</h1>
+
+<h2>Add a console</h2>
+
+<br>
+
+<a href="/consoles/create" class="btn btn-primary">Add a new console</a>
 
 @endsection

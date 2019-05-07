@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Console;
 
 class ConsolesController extends Controller
 {
@@ -13,7 +14,9 @@ class ConsolesController extends Controller
      */
     public function index()
     {
-        return view('consoles.index');
+        $title = 'This is the consoles index page';
+
+        return view('consoles.index')->with("title",$title);
     }
 
     /**
@@ -23,7 +26,7 @@ class ConsolesController extends Controller
      */
     public function create()
     {
-        //
+        return view('consoles.create');
     }
 
     /**
@@ -34,7 +37,22 @@ class ConsolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $console = new Console; 
+
+       $console->nombre = $request->input('nombre');
+       $console->generation = $request->input('generation');
+       $console->developer = $request->input('developer');
+       $console->units_sold = $request->input('units_sold');
+       $console->best_selling_game = $request->input('best_selling_game');
+       $console->release_date = $request->input('release_date');
+       $console->lifespan = $request->input('lifespan');
+       $console->discontinued_year = $request->input('discontinued_year');
+       $console->type = $request->input('type');
+       $console->successor_console=$request->input('successor_console');
+       $console->predecessor_console=$request->input('predecessor_console');
+       $console->save();
+
+       return redirect('/consoles')->with('success','The console has been created');
     }
 
     /**

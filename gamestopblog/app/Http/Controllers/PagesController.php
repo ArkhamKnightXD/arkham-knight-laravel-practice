@@ -17,7 +17,7 @@ class PagesController extends Controller
         //varias variables en el primero solo se puede mandar 1
        // return view('pages.index', compact('title'));
 
-        return view('pages.index')->with('title',$title);
+        return view('pages.index')->with('title', $title);
     }
 
     public function about()
