@@ -14,16 +14,18 @@ class CreateConsolesTable extends Migration
     public function up()
     {
         // Aqui los campos, agregare los campos successor and predecessor luego mediante migration
+        // smallinterger nos es suficiente para almacenar valores en los millones, por lo tanto debo cambiar esta columna
+        // por ahora trabajare con text en vez de date en la base de datos para retrasarme con estos problemas
         Schema::create('consoles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
+            $table->string('name');
             $table->string('generation');
             $table->string('developer');
             $table->string('type');
-            $table->smallinteger('best_selling_game');
-            $table->smallinteger('units_sold');
-            $table->date('release_date');
-            $table->date('discontinued_year');
+            $table->string('best_selling_game');
+            $table->integer('units_sold'); 
+            $table->string('release_date');
+            $table->string('discontinued_year');
             $table->string('lifespan');
             $table->timestamps();
         });

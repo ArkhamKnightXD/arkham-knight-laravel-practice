@@ -5,7 +5,7 @@ es necesario crear esta carpeta ya que no viene por defecto -->
 
 <!--Aqui especificamos el contenido que saldra en la plantilla de la que heredamos -->
 @section('content')
-    <h1>{{$title}}</h1>
+    <h1 class="text-light">{{$title}}</h1>
 
 
     <!-- De esta forma se hace un if en laravel -->

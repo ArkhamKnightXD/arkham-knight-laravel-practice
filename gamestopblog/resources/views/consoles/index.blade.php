@@ -5,7 +5,7 @@
 
 <h1 class="text-light text-center">{{$title}}</h1>
 
-<h2>Add a console</h2>
+<h2 class="text-light">Add a console</h2>
 
 <br>
 

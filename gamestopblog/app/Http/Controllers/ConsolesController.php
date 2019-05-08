@@ -39,7 +39,7 @@ class ConsolesController extends Controller
     {
        $console = new Console; 
 
-       $console->nombre = $request->input('nombre');
+       $console->name = $request->input('name');
        $console->generation = $request->input('generation');
        $console->developer = $request->input('developer');
        $console->units_sold = $request->input('units_sold');
@@ -48,8 +48,8 @@ class ConsolesController extends Controller
        $console->lifespan = $request->input('lifespan');
        $console->discontinued_year = $request->input('discontinued_year');
        $console->type = $request->input('type');
-       $console->successor_console=$request->input('successor_console');
-       $console->predecessor_console=$request->input('predecessor_console');
+       $console->successor_console = $request->input('successor_console');
+       $console->predecessor_console = $request->input('predecessor_console');
        $console->save();
 
        return redirect('/consoles')->with('success','The console has been created');
