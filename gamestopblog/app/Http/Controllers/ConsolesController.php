@@ -15,8 +15,10 @@ class ConsolesController extends Controller
     public function index()
     {
         $title = 'This is the consoles index page';
+        
+        $consoles = Console::orderBy('name', 'desc')->paginate(10);
 
-        return view('consoles.index')->with("title",$title);
+        return view('consoles.index')->with('consoles', $consoles);
     }
 
     /**
@@ -63,7 +65,9 @@ class ConsolesController extends Controller
      */
     public function show($id)
     {
-        //
+        $console = Console::find($id);
+
+        return view('consoles.show')->with('console', $console);
     }
 
     /**
